@@ -1,0 +1,56 @@
+/*
+  ==========================================
+  blocked.css - Hiding Styles!
+  ==========================================
+
+  This file runs on scratch.mit.edu pages.
+  It controls how blocked content looks (or doesn't look!).
+
+  The main trick: when content.js finds something by a
+  blocked user, it adds the class "scratch-blocked-hidden"
+  to that element. This CSS then makes it invisible!
+*/
+
+/*
+  Hide anything with the "scratch-blocked-hidden" class.
+
+  "display: none" makes it completely invisible AND
+  it doesn't take up any space on the page.
+  It's like the element doesn't exist at all!
+
+  "!important" means "no, REALLY hide it" — it makes
+  sure this rule wins over any other Scratch styling.
+*/
+.scratch-blocked-hidden {
+  display: none !important;
+}
+
+/*
+  The warning banner that shows up on a blocked user's profile.
+  It's a big orange bar at the top of the page.
+*/
+#scratch-blocker-banner {
+  /* Orange background so it stands out */
+  background-color: #ff6600;
+
+  /* White text is easy to read on orange */
+  color: white;
+
+  /* Some padding so the text isn't squished */
+  padding: 12px 20px;
+
+  /* Center the text */
+  text-align: center;
+
+  /* Bold so it's easy to read */
+  font-weight: bold;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+
+  /* Make sure it stays at the top of the page */
+  position: sticky;
+  top: 0;
+
+  /* Put it above everything else */
+  z-index: 99999;
+}
