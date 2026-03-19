@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    ==========================================
+    popup.html - The Blocker's Control Panel!
+    ==========================================
+
+    This is the little window that pops up when you click
+    the extension icon in your browser toolbar.
+
+    It lets you:
+      1. Type in a Scratch username to block
+      2. See a list of everyone you've blocked
+      3. Unblock people if you change your mind
+  -->
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <!-- The title at the top -->
+  <h1>Scratch User Blocker</h1>
+
+  <!-- This is where you type in a username and hit "Block" -->
+  <div id="add-section">
+    <input
+      type="text"
+      id="username-input"
+      placeholder="Type a Scratch username..."
+    >
+    <button id="block-button">Block</button>
+  </div>
+
+  <!-- If something goes wrong (like an empty name), we show a message here -->
+  <div id="status-message"></div>
+
+  <!-- The list of blocked users shows up here -->
+  <h2>Blocked Users</h2>
+  <ul id="blocked-list">
+    <!-- JavaScript will fill this in! -->
+  </ul>
+
+  <!-- This message shows when nobody is blocked yet -->
+  <p id="empty-message">No users blocked yet.</p>
+
+  <!-- Load the JavaScript that makes everything work -->
+  <script src="popup.js"></script>
+</body>
+</html>

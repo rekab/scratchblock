@@ -1,0 +1,135 @@
+/*
+  ==========================================
+  popup.css - Making the popup look nice!
+  ==========================================
+
+  This file controls how the popup window looks.
+  Try changing the colors to make it your own!
+*/
+
+/* The whole popup window */
+body {
+  /* How wide the popup is (in pixels) */
+  width: 300px;
+
+  /* A nice font that's easy to read */
+  font-family: Arial, sans-serif;
+
+  /* A little breathing room around the edges */
+  padding: 12px;
+
+  /* Light background color */
+  background-color: #f9f9f9;
+
+  /* No extra space around the body */
+  margin: 0;
+}
+
+/* The big title at the top */
+h1 {
+  font-size: 18px;
+  color: #ff6600;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+/* The smaller "Blocked Users" heading */
+h2 {
+  font-size: 14px;
+  color: #333;
+  margin: 12px 0 6px 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+}
+
+/* The section with the input box and button */
+#add-section {
+  /* Flexbox puts things side by side */
+  display: flex;
+  gap: 6px;
+}
+
+/* The text input where you type usernames */
+#username-input {
+  /* "flex: 1" means "take up all the remaining space" */
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+/* The "Block" button */
+#block-button {
+  padding: 6px 14px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* When you hover over the Block button, it gets darker */
+#block-button:hover {
+  background-color: #e55b00;
+}
+
+/* Status messages (like "User already blocked!") */
+#status-message {
+  font-size: 12px;
+  margin-top: 4px;
+  min-height: 16px;
+  color: #cc0000;
+}
+
+/* The list of blocked users */
+#blocked-list {
+  /* Remove the default bullet points */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Each blocked user in the list */
+#blocked-list li {
+  display: flex;
+  /* Push the username left and the button right */
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 6px;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+/* The username text inside each list item */
+#blocked-list li span {
+  color: #333;
+}
+
+/* The "Unblock" button next to each name */
+.unblock-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 2px 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/* When you hover over the Unblock button, it gets darker */
+.unblock-button:hover {
+  background-color: #45a049;
+}
+
+/* The "No users blocked yet" message */
+#empty-message {
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  margin: 8px 0 0 0;
+}
